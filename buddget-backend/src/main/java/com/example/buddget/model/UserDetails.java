@@ -33,5 +33,6 @@ public class UserDetails {
     private Long salary;
 
     @OneToOne(mappedBy = "userDetails")
+    @Schema(description = "The details of a user")
     private User user;
 }

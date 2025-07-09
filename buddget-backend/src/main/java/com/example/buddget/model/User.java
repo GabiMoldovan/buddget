@@ -41,8 +41,10 @@ public class User {
 
     @OneToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_details_id")
+    @Schema(description = "The id of the record in the data base")
     private UserDetails userDetails;
 
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
+    @Schema(description = "Reference to the logs of a user")
     private List<Log> logs;
 }

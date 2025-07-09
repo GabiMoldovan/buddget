@@ -16,9 +16,11 @@ public class Log {
     @Schema(description = "Id of a log")
     private Long id;
 
+    @Schema(description = "Description of the action that the user performed")
     private String message;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
+    @Schema(description = "The id of the user to which the log belongs to")
     private User user;
 }
