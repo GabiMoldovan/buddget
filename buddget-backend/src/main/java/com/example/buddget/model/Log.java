@@ -28,4 +28,10 @@ public class Log {
     @JoinColumn(name = "user_id")
     @Schema(description = "The id of the user to which the log belongs to")
     private User user;
+
+    public Log(String message, LocalDateTime timestamp, User user) {
+        this.message = message;
+        this.timestamp = timestamp;
+        this.user = user;
+    }
 }

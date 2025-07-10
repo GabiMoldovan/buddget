@@ -39,4 +39,12 @@ public class Item {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "spending_id")
     private Spending spending;
+
+    public Item(String itemName, float pricePerUnit, float units, Category category, Spending spending) {
+        this.itemName = itemName;
+        this.pricePerUnit = pricePerUnit;
+        this.units = units;
+        this.category = category;
+        this.spending = spending;
+    }
 }

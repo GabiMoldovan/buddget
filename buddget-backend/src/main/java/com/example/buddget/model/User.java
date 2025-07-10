@@ -47,4 +47,12 @@ public class User {
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY)
     @Schema(description = "Reference to the logs of a user")
     private List<Log> logs;
+
+    public User(String email, String username, String password, Roles role, UserDetails userDetails) {
+        this.email = email;
+        this.username = username;
+        this.password = password;
+        this.role = role;
+        this.userDetails = userDetails;
+    }
 }

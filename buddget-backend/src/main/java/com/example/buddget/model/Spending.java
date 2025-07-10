@@ -51,4 +51,12 @@ public class Spending {
     @Column(length = 512)
     @Schema(description = "The path to the image")
     private String imagePath;
+
+    public Spending(User user, String companyName, float totalPrice, List<Item> products, String description) {
+        this.user = user;
+        this.companyName = companyName;
+        this.totalPrice = totalPrice;
+        this.products = products;
+        this.description = description;
+    }
 }

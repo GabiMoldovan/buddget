@@ -35,4 +35,11 @@ public class UserDetails {
     @OneToOne(mappedBy = "userDetails")
     @Schema(description = "The details of a user")
     private User user;
+
+    public UserDetails(String job, AgeIntervals ageInterval, Long salary, User user) {
+        this.job = job;
+        this.ageInterval = ageInterval;
+        this.salary = salary;
+        this.user = user;
+    }
 }
