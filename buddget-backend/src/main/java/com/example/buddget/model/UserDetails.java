@@ -1,6 +1,7 @@
 package com.example.buddget.model;
 
 import com.example.buddget.model.enums.AgeIntervals;
+import com.example.buddget.model.enums.SalaryCurrency;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -31,6 +32,9 @@ public class UserDetails {
 
     @Schema(description = "User's salary")
     private Long salary;
+
+    @Schema(description = "")
+    private SalaryCurrency salaryCurrency;
 
     @OneToOne(mappedBy = "userDetails")
     @Schema(description = "The details of a user")

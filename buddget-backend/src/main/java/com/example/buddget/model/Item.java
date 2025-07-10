@@ -26,7 +26,7 @@ public class Item {
     private String itemName;
 
     @Column(nullable = false)
-    private float pricePerUnit;
+    private float totalPrice;
 
     @Column(nullable = false)
     private float units;
@@ -40,9 +40,9 @@ public class Item {
     @JoinColumn(name = "spending_id")
     private Spending spending;
 
-    public Item(String itemName, float pricePerUnit, float units, Category category, Spending spending) {
+    public Item(String itemName, float totalPrice, float units, Category category, Spending spending) {
         this.itemName = itemName;
-        this.pricePerUnit = pricePerUnit;
+        this.totalPrice = totalPrice;
         this.units = units;
         this.category = category;
         this.spending = spending;

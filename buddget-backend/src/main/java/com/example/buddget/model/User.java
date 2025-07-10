@@ -24,7 +24,7 @@ public class User {
     @Schema(description = "User's id")
     private Long id;
 
-    @Email(regexp=".*@.*\\..*", message = "Email should be valid")
+    @Email(message = "Email should be valid")
     @Column(unique = true)
     @Schema(description = "User's email")
     private String email;

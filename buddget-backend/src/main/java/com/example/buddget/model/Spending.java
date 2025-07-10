@@ -48,9 +48,9 @@ public class Spending {
     @Schema(description = "Description about the spending")
     private String description;
 
-    @Column(length = 512)
-    @Schema(description = "The path to the image")
-    private String imagePath;
+    @Column(length = 8)
+    @Schema(description = "The name to the image in the folder where it is saved")
+    private String imageName;
 
     public Spending(User user, String companyName, float totalPrice, List<Item> products, String description) {
         this.user = user;
